@@ -1,4 +1,4 @@
-# Hacktoberfest
+# __Hacktoberfest__
 <p align="center">
  <img src="http://AllenCompSci.github.io/Hacktoberfest/static/img/site/GreyBlue.png">
 </p>
@@ -26,15 +26,17 @@ This census has a live webpage [here](https://allencompsci.github.io/Hacktoberfe
 ![Hacktoberfest-Census](static/img/Hackcensus.png "Hacktoberfest-Census")
 ---
 
-### Contributing
+### __Contributing__
 Fork this project and add your username + profile link to the [Census](https://github.com/AllenCompSci/Hacktoberfest/blob/master/README.md) list below, then make a Pull Request to add your name to this repository like so..
 ```markdown
-[AllenCompSci](https://github.com/AllenCompSci)
+ - [AllenCompSci](https://github.com/AllenCompSci)
 ```
 
-### Census
- - [Shivam1897](https://github.com/shivam1897)
+### __Census__
+
  - [AllenCompSci](https://github.com/AllenCompSci)
+ - [Traderain](https://github.com/Traderain)
+ - [Shivam1897](https://github.com/shivam1897)
  - [Mr. Hudson](https://github.com/theshrewedshrew)
  - [ayushagarwal0316](https://github.com/ayushagarwal0316)
  - [PAH](https://github.com/pahosler)
@@ -70,7 +72,7 @@ Fork this project and add your username + profile link to the [Census](https://g
  - [Kodaskool](https://github.com/Kodaskool)
  - [MasterAndrewJ](https://github.com/MasterAndrewJ)
  - [Holden Essman](https://github.com/HoldenEssman)
- - [RogueNinja410](https://github.com/RogueNinja410])
+ - [RogueNinja410](https://github.com/RogueNinja410)
  - [carsonmires](https://github.com/carsonmires)
  - [PeteDelkus](https://github.com/PeteDelkus)
  - [John Nguyen](https://github.com/jawnlovesfreestuff)
@@ -126,17 +128,26 @@ Fork this project and add your username + profile link to the [Census](https://g
  - [250842mark](https://github.com/250842mark)
  - [Xxbingood4everxX](https://github.com/bingood4ever)
  - [Ajitesh Gupta](https://github.com/AjiteshGupta)
+ - [tonymanou](https://github.com/tonymanou)
+ - [marcirsch](https://github.com/marcirsch)
+ - [MJHudson618](https://github.com/MJHudson618)
  - [umaams](https://github.com/umaams)
  - [marrujoalex](https://github.com/marrujoalex)
  - [Kevinjblanchard](https://github.com/Kevinjblanchard)
  - [angelinabiswas](https://github.com/angelinabiswas)
  - [ervyncruz891](https://github.com/ervyncruz891)
+ - [youssefKhA](https://github.com/youssefKhA)
  - [ColinNeary](https://github.com/ColinNeary)
  - [JustinSchrader](https://github.com/justinschrader)
  - [Brookevaughan](https://github.com/BrookeVaughan)
  - [alvalle09](https://github.com/alvalle09)
  - [zoritecgaming74](https://github.com/zoritecgaming74)
  - [mwalenia](https://github.com/mwalenia)
+ - [PJHudson618](https://github.com/PJHudson618)
+ - [Ehatsham](https://github.com/htc1dan)
+ - [amanmehta-maniac](https://github.com/amanmehta-maniac)
+ - [PAWAN KUMAR GAUTAM](https://github.com/PAWAN-KUMAR-GAUTAM000) 
+ - [huyanhh](https://github.com/huyanhh)
  - [AllureQuartz](https://github.com/AllureQuartz)
  - [raghav008](https://github.com/raghav008)
  - [EvilEpicCoder](https://github.com/EvilEpicCoder)
@@ -144,7 +155,29 @@ Fork this project and add your username + profile link to the [Census](https://g
  - [Ghatage](https://github.com/Ghatage)
  - [Kiiryu](https://github.com/kiiryu)
  - [ShrutiKapoor](https://github.com/shrutikapoor08)
-
-
-
-
+ - [yalcins](https://github.com/yalcins)
+ - [JarenDuffield](https://github.com/JarenDuffield)
+ - [m6code](https://github.com/m6code)
+ - [Satwik Relwani](https://github.com/devsatwik)
+ - [GO22](https://github.com/GO22)
+ - [hotpeper646](https://github.com/hotpeper646)
+ - [thenicoman](https://github.com/thenicoman)
+ - [Abhi1458](https://github.com/Abhi1458)
+ - [priya15497](https://github.com/priya15497)
+ - [noosratr](https://github.com/noosratr)
+ - [taileanguyen](https://github.com/taileanguyen)
+ - [arya-ayush](https://github.com/arya-ayush)
+ - [jainayush975](https://github.com/jainayush975)
+ - [jasondrogers](https://github.com/jasondrogers)
+ - [Justin-Hollmer](https://github.com/Justin-Hollmer)
+ - [Codyho](https://github.com/Codyho)
+ - [jumbobaco](https://github.com/jumbobaco)
+ - [ved-n](https://github.com/ved-n)
+ - [Cris-Cos](https://github.com/cris-cos)
+ - [Vishal Reddy](https://github.com/vishalre)
+ - [Yahnit](https://github.com/Yahnit)
+ - [SpencerBullinger](https://github.com/SpencerBullinger)
+ - [Phaelin](https://github.com/phaelin)
+ - [MikkelP](https://github.com/MikkelP)
+ - [malachiw](https://github.com/malachiw)
+ - [Kool Arpan](https://github.com/arpanpyasi)

@@ -24,6 +24,8 @@ class HelloWorld{
         Census.add("Gainz101 @ https://github.com/Gainz101");
         Census.add("zachdogg @ https://github.com/Zachdogg1");
         Census.add("Johnathan G. @ https://github.com/SodaCan0515");
+        Census.add("MJHudson618 @ https://github.com/MJHudson618");
+        Census.add("Abhi1458 @ https://github.com/Abhi1458");
 
 
 

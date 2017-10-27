@@ -1,6 +1,35 @@
 #include "prototype.h"
 
 void trimStr(std::string& x){
+    std:: cpy = "";
+    // left trim
+    bool val = true;
+    for(int i = 0; i < (int)x.length(); i++){
+        if(val){
+            if(x[i] != ' '){
+                val = true;
+                cpy = x[i];
+            }
+        }
+        else{
+            cpy += x[i];         
+        }
+    }
+    x = cpy;
+    // right trim
+    val = true;
+    for(int i = x.length() - 1; i >= 0; i--){
+        if(val){
+            if(x[i] != ' '){
+                val = true;
+                cpy = x[i];
+            }
+        }
+        else{
+            cpy += x[i];         
+        }
+    }
+    x = cpy;
     bool neg = isNeg(x);
     if(neg) 
         sign(x);
@@ -82,10 +111,11 @@ std::string abs(std::string x){
     return isNeg(x) ? x.substr(1) : x;
 }
 
-std::string ADD(std::vector<std::string> NUMS){
+std::string ADD(std::vector<std::string> NUMS){ // ADD for Multiply when vectors are created
     int size_NUMS = (int) NUMS.size(); 
     std::vector<std::string> POS;
     std::vector<std::string> NEG;
+    std::vector<std::string> tmp;
     for(int i = 0; i < size_NUMS; i++){
         if(isNeg(NUMS[i]))
             NEG.push_back(NUMS[i]);
@@ -94,18 +124,77 @@ std::string ADD(std::vector<std::string> NUMS){
     }
     placeHandler(POS);
     placeHandler(NEG);
-    // STOPPING POINT
+    tmp.clear();
+    /// Stopping point USE tmp to hold the poped values and clear between pos and neg. stop when tmp.clear() is empty and pos/neg size = 1
+    /* DONT WANT TO DO... THIS IS CURRENT IMPLEMENTATION
+    do{
+        do{
+            tmp.push_back(ADD(POS.pop(), POS.pop()));
+        }while((int)(POS.size())>2);
+        do{
+            POS.push_back(tmp.pop());
+        }while(!tmp.empty());
+        placeHandler(POS);
+    }while((int)(POS.size()) == 1);
+    INSTEAD 
+    */
+    std::string temp = "0";
+    int carry = 0;
+    if((int)POS.size()>0){
+        for(int j = POS[0].length() - 1; j >= 0; j--){ // j index of string
+            int HOLD = 0;
+            for(int i = 0; i < (int)POS.size(); i++){ // i index of vector
+                HOLD += POS[i][j] - 48;
+            }
+            HOLD += carry; // ADDS PREVIOUS CARRY
+            temp = (char)((HOLD % 10) + 48) + temp; 
+            carry = HOLD / 10; // Integer Division
+        }
+        while(carry != 0){
+            temp = (char)((carry % 10) + 48) + temp; 
+            carry /= 10;
+        }
+    }
+    else{
+        temp = "0";   
+    }
+    POS.clear();
+    POS.push_back(temp);
+    temp = "";
+    if((int)NEG.size()>0){
+        for(int j = NEG[0].length() - 1; j >= 0; j--){ // j index of string
+            int NEG = 0;
+            for(int i = 0; i < (int)NEG.size(); i++){ // i index of vector
+                HOLD += NEG[i][j] - 48;
+            }
+            HOLD += carry; // ADDS PREVIOUS CARRY
+            temp = (char)((HOLD % 10) + 48) + temp; 
+            carry = HOLD / 10; // Integer Division
+        }
+        while(carry != 0){
+            temp = (char)((carry % 10) + 48) + temp; 
+            carry /= 10;
+        }
+    }
+    else{
+        temp = "0";   
+    }
+    return SUB(POS.pop(), temp);
 }
     
 std::string ADD(std::string x, std::string y){
     if(isNeg(x) && isNeg(y)){
-        return "-" + ADD(sign(x), sign(y));
+        sign(x);
+        sign(y);
+        return "-" + ADD(x,y);
     }
     else if(isNeg(x)){
-        return SUB(y,sign(x));
+        sign(x);
+        return SUB(y,x);
     }
     else if(isNeg(y)){
-        return SUB(x,sign(y));
+        sign(y);
+        return SUB(x,y);
     }
     placeHandler(x,y);
     std::result = "";
@@ -122,18 +211,52 @@ std::string ADD(std::string x, std::string y){
     }
     if(carry > 0)
         result = (char)(carry+48) + result;
-    return trimStr(result);
+    trimStr(result);
+    return result;
 }
-std::string SUB(std::string x, std::string y){
+std::string SUB(std::string x, std::string y){ // THIS IS X - Y
     if(isNeg(x) && isNeg(y)){
-        // - (x - y) Need to check if y is larger than x. 
+        // - (x - y) Need to check if y is larger than x. AFTER NEG
+        sign(x);
+        sign(y);
+        return SUB(y,x);
     }
+    else if(isNeg(x)){
+        sign(x);
+        return "-" + ADD(x, y);   
+    }
+    else if(isNeg(y)){
+        sign(y);
+        return ADD(x,y);   
+    }
+    // Decimal Future
+    
+    if(isLessThan(x,y){
+        return "-" + SUB(y,x);   
+    }
+    placeHandler(x,y);
+    std::string result = "";
+    // This X will Always be greater than Y
+    for(int i = (int)x.length()-1; i>= 0; i--){
+        int val = x[i] - y[i] - 48;
+        if(val < 48){
+            val += 10;
+            x[i-1]--;
+        }
+        result = (char)(val + 48) + result;
+    }
+    return result;
 }
 std::string DIVIDE(std::string, std::string){
   
 }
-std::string INDIV(std::string x, std::string y){
-    
+std::string INTDIV(std::string x, std::string y){
+    std::string temp = DIVIDE(x,y);
+    if(temp.find(' ')>0){
+        temp = temp.substr(0,temp.find(' '));   
+    }
+    trimStr(temp);
+    return temp;
 }
 std::string MULTI(std::string, std::string){
   
